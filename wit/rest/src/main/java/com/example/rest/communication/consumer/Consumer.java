@@ -4,12 +4,15 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 import shared.Response;
 
+/**
+ * The Consumer class is responsible for retrieving messages from the Queue Response.
+ */
 @Component
 public class Consumer {
     private Response mResponse;
 
     /**
-     * Registers a listener to retrieve messages from the queue response.
+     * Registers a listener to retrieve messages from the Queue Response.
      *
      * @param response the object retrieved from the queue. Contains the result of the operation.
      */

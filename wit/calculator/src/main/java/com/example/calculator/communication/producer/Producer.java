@@ -4,6 +4,9 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Component;
 import shared.Response;
 
+/**
+ * The Producer class is responsible for sending messages for the Queue Response.
+ */
 @Component
 public class Producer {
     private final RabbitTemplate mRabbitTemplate;

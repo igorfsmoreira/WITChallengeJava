@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import static com.example.rest.model.Operation.*;
 
+/**
+ * Controller to manage HTTP requests for a specific end point.
+ */
 @RestController
 public class Controller {
     private static final String ENDPOINT_ADDITION = "/addition";
@@ -30,7 +33,7 @@ public class Controller {
      * @param operand1 the first operand.
      * @param operand2 the second operand.
      * @return the result for the addition.
-     * *
+     * <p>
      * Example: localhost:8080/addition?operand1=100&operand2=250
      */
     @GetMapping(ENDPOINT_ADDITION)
@@ -56,7 +59,7 @@ public class Controller {
      * @param operand1 the first operand.
      * @param operand2 the second operand.
      * @return the result for the subtraction.
-     * *
+     * <p>
      * Example: localhost:8080/subtraction?operand1=100&operand2=250
      */
     @GetMapping(ENDPOINT_SUBTRACTION)
@@ -82,7 +85,7 @@ public class Controller {
      * @param operand1 the first operand.
      * @param operand2 the second operand.
      * @return the result for the multiplication.
-     * *
+     * <p>
      * Example: localhost:8080/multiplication?operand1=100&operand2=250
      */
     @GetMapping(ENDPOINT_MULTIPLICATION)
@@ -108,7 +111,7 @@ public class Controller {
      * @param operand1 the first operand.
      * @param operand2 the second operand.
      * @return the result for the division.
-     * *
+     * <p>
      * Example: localhost:8080/division?operand1=100&operand2=250
      */
     @GetMapping(ENDPOINT_DIVISION)
@@ -128,6 +131,12 @@ public class Controller {
         return new Operation(mConsumer.getResponse().getResult());
     }
 
+    /**
+     * Converts a string to double.
+     *
+     * @param operand the value to convert.
+     * @return the value converted.
+     */
     private double stringToDouble(String operand) {
         double value = 0;
 

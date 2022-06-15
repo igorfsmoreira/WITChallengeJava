@@ -1,5 +1,8 @@
 package com.example.rest.model;
 
+/**
+ * Stores the result of an operation.
+ */
 public class Operation {
     public static final String ADDITION = "addition";
     public static final String SUBTRACTION = "subtraction";
